@@ -1,0 +1,602 @@
+/* GLOBAL */
+
+:root {
+  --navy: #14295a;
+  --navy-dark: #12295b;
+  --text-muted: #4a5878;
+  --border: #c9d0e0;
+  --placeholder: #7b849a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* MAIN CONTAINER */
+
+.Air-ur-recruiter-page {
+  --base: min(1.16vw, 2vh);
+  --u: var(--base);
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: stretch;
+  justify-content: center;
+
+  font-family: "Open Sans", "Segoe UI", Arial, sans-serif;
+
+  color: var(--navy);
+
+  background: linear-gradient(
+    90deg,
+    #566b9c 0,
+    #566b9c calc(50% - var(--u) * 43),
+    #8996bb calc(50% - var(--u) * 20),
+    #c6cce0 calc(50% - var(--u) * 4),
+    #ffffff calc(50% + var(--u) * 7),
+    #ffffff 100%
+  );
+
+  max-width: 2560px;
+  margin: 0 auto;
+}
+
+/* LEFT SECTION */
+
+.Air-ur-recruiter-left {
+  flex: 1 1 50%;
+
+  min-width: 0;
+
+  margin-left: clamp(16px, 4vw, 80px);
+
+  padding: clamp(24px, 3.5vh, 40px) clamp(20px, 2.5vw, 40px)
+    clamp(24px, 3.5vh, 40px) clamp(20px, 4.5vw, 75px);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  justify-content: safe center;
+  align-items: flex-start;
+
+  gap: clamp(12px, 2.2vh, 24px);
+
+  background: transparent;
+
+  text-align: left;
+}
+
+.Air-ur-recruiter-left > * {
+  width: 100%;
+  max-width: 640px;
+  flex-shrink: 0;
+}
+
+.Air-ur-recruiter-brand-header {
+  color: #fff;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.Air-ur-recruiter-brand-tag {
+  margin-bottom: clamp(8px, 1.5vh, 14px);
+
+  color: rgba(255, 255, 255, 0.94);
+
+  font-size: 14.5px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.Air-ur-recruiter-brand-heading {
+  color: #fff;
+
+  font-size: clamp(22px, 3.3vh, 31px);
+  font-weight: 800;
+
+  line-height: 1.22;
+
+  margin-bottom: 6px;
+}
+
+.Air-ur-recruiter-brand-subtext {
+  max-width: 480px;
+
+  margin-top: clamp(6px, 1.2vh, 12px);
+
+  color: #eef1f8;
+
+  font-size: 13.5px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+/* MAIN IMAGE */
+
+.Air-ur-recruiter-illustration-wrap img {
+  display: block;
+
+  width: min(650px, 100%);
+
+  height: auto;
+
+  max-height: clamp(280px, 56vh, 560px);
+
+  margin-top: 0;
+
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* QUOTE BOX */
+
+.Air-ur-recruiter-quote-box {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding: clamp(12px, 1.8vh, 16px) 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(14px, 2vw, 20px);
+
+  background: rgba(255, 255, 255, 0.45);
+
+  border-radius: 9px;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.Air-ur-recruiter-quote-lock-icon {
+  flex: none;
+
+  width: 22px;
+  height: 22px;
+
+  object-fit: contain;
+
+  align-self: center;
+}
+
+.Air-ur-recruiter-quote-content-wrap {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  text-align: left;
+}
+
+.Air-ur-recruiter-quote-box p {
+  color: #4a5878;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.35;
+}
+
+.Air-ur-recruiter-quote-box span {
+  display: block;
+
+  margin-top: 1px;
+  margin-right: 110px;
+
+  color: #4a5878;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.35;
+}
+
+/* RIGHT SECTION */
+
+.Air-ur-recruiter-right {
+  flex: 1 1 50%;
+
+  min-width: 0;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: clamp(24px, 3.5vh, 40px) clamp(20px, 3vw, 50px);
+
+  background: transparent;
+}
+
+.Air-ur-recruiter-content {
+  width: 100%;
+
+  max-width: 640px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Air-ur-recruiter-form-header {
+  margin-bottom: clamp(12px, 2vh, 20px);
+}
+
+.Air-ur-recruiter-form-header h2 {
+  color: #14295a;
+
+  font-size: clamp(22px, 3.4vh, 28px);
+
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.Air-ur-recruiter-form-header p {
+  margin-top: 4px;
+
+  color: #4a5878;
+
+  font-size: 14px;
+}
+
+/* FORM FIELDS LAYOUT */
+
+.Air-ur-recruiter-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: clamp(10px, 1.8vh, 15px);
+}
+
+.Air-ur-recruiter-row {
+  display: flex;
+
+  gap: clamp(12px, 1.4vw, 18px);
+
+  width: 100%;
+}
+
+.Air-ur-recruiter-field-group {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: clamp(4px, 0.7vh, 6px);
+}
+
+.Air-ur-recruiter-field-group.full-width {
+  flex: 0 0 100%;
+}
+
+.Air-ur-recruiter-field-group label {
+  color: #14295a;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+.Air-ur-recruiter-field-group input,
+.Air-ur-recruiter-select-wrapper select {
+  width: 100%;
+
+  height: clamp(36px, 5.4vh, 43px);
+
+  padding: 0 14px;
+
+  border: 1.5px solid #c9d0e0;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  color: #5b647c;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.Air-ur-recruiter-field-group input:focus,
+.Air-ur-recruiter-select-wrapper select:focus {
+  border-color: #14295a;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow: 0 0 0 3px rgba(20, 41, 90, 0.12);
+}
+
+.Air-ur-recruiter-field-group input::placeholder {
+  color: #7b849a;
+}
+
+/* PASSWORD WRAPPER & EYE ICON STYLES */
+.Air-ur-recruiter-password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.Air-ur-recruiter-password-input {
+  padding-right: 40px !important;
+}
+
+.Air-ur-recruiter-eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+}
+
+.Air-ur-recruiter-eye-icon:hover {
+  opacity: 1;
+}
+
+/* SELECT + PNG ARROW */
+
+.Air-ur-recruiter-select-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+.Air-ur-recruiter-select-wrapper select {
+  padding-right: 36px;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+
+  color: #5b647c;
+}
+
+.Air-ur-recruiter-select-wrapper select[data-empty="true"] {
+  color: #7b849a;
+}
+
+.Air-ur-recruiter-select-wrapper select option {
+  background: #fff;
+
+  color: #14295a;
+}
+
+.Air-ur-recruiter-select-wrapper select option:disabled {
+  color: #7b849a;
+}
+
+.Air-ur-recruiter-select-arrow-img {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  width: 12px;
+  height: 12px;
+
+  object-fit: contain;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+/* TERMS & CONDITIONS */
+
+.Air-ur-recruiter-terms {
+  margin-top: 2px;
+}
+
+.Air-ur-recruiter-terms label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #4a5878;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  cursor: pointer;
+}
+
+.Air-ur-recruiter-terms input[type="checkbox"] {
+  flex: none;
+
+  width: 15px;
+  height: 15px;
+
+  accent-color: #14295a;
+
+  cursor: pointer;
+}
+
+.Air-ur-recruiter-terms-text strong {
+  color: #14295a;
+
+  font-weight: 700;
+}
+
+/* SUBMIT BUTTON */
+
+.Air-ur-recruiter-submit-btn {
+  width: 100%;
+
+  height: clamp(42px, 5.8vh, 48px);
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: linear-gradient(135deg, #142f5d 0%, #1e3f7f 100%);
+
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.Air-ur-recruiter-submit-btn:hover {
+  background: linear-gradient(135deg, #0d2348 0%, #182f66 100%);
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 6px 16px rgba(20, 47, 93, 0.25);
+}
+
+/* LOGIN REDIRECT LINK */
+
+.Air-ur-recruiter-login-redirect {
+  margin-top: clamp(12px, 2vh, 18px);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  color: #4a5878;
+
+  font-size: 13px;
+}
+
+.Air-ur-recruiter-login-redirect a {
+  color: #14295a;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.Air-ur-recruiter-login-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE MEDIA QUERIES  */
+@media (min-width: 2560px) {
+  .Air-ur-recruiter-left {
+    margin-left: 0;
+    padding: clamp(24px, 3.5vh, 40px) 50px;
+    align-items: center;
+  }
+}
+
+/* RESPONSIVE (BELOW 1024px) */
+
+@media (max-width: 1023px) {
+  .Air-ur-recruiter-page {
+    flex-direction: column;
+
+    height: auto;
+
+    background: linear-gradient(
+      180deg,
+      #7187ad 0%,
+      #859ab8 15%,
+      #b0bed2 30%,
+      #e0e7ef 45%,
+      #f5f7fa 52%,
+      #ffffff 60%,
+      #ffffff 100%
+    );
+  }
+
+  .Air-ur-recruiter-left {
+    display: none;
+  }
+
+  .Air-ur-recruiter-right {
+    flex: 1 1 auto;
+
+    width: 100%;
+
+    padding: clamp(24px, 5vh, 40px) 20px;
+  }
+
+  .Air-ur-recruiter-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Air-ur-recruiter-page {
+    background: linear-gradient(
+      180deg,
+      #667fa9 0%,
+      #7d95b5 15%,
+      #a7bccc 30%,
+      #dae4ee 45%,
+      #f4f6fa 53%,
+      #ffffff 61%,
+      #ffffff 100%
+    );
+  }
+
+  .Air-ur-recruiter-field-group input,
+  .Air-ur-recruiter-select-wrapper select {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .Air-ur-recruiter-right {
+    padding: 16px 16px 28px;
+  }
+
+  .Air-ur-recruiter-row {
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .Air-ur-recruiter-form-header h2 {
+    font-size: 22px;
+  }
+}

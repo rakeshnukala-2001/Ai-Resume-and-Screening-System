@@ -1,0 +1,652 @@
+.AIR-Login-Page-Container {
+  padding: 10px 25px;
+  background: linear-gradient(to left, #ffffff 20%, #566b94 98%);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  gap: 100px;
+  font-family: "Open Sans", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+.Air-Login-Page-Left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(15px, 2.4vh, 28px);
+}
+.Air-Login-Page-Left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 900px;
+}
+.Air-Product-Header-Container {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  gap: 10px;
+}
+
+.Air-ProductLogo-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #132a56;
+  padding: 12.5px;
+  border-radius: 12px;
+}
+.Air-ProductLogo-img {
+  max-width: 22px;
+}
+
+.Air-Product-Title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.Air-Product-SubTitle {
+  margin: 0;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.Air-Seperator-Dot-white {
+  min-height: 4px;
+  min-width: 4px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-top: 3px;
+}
+.Air-Product-HeroSec-Container {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  gap: 8px;
+}
+.Air-Product-HeroSec-welcome-Text {
+  font-size: 24px;
+  margin: 0;
+}
+
+.Air-Product-HeroSec-Text {
+  font-size: 38px;
+  margin: 0;
+  padding: 0;
+  line-height: 44px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.Air-Product-HeroSec-sub-heading {
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 0;
+}
+.Air-Product-cards-wrapper {
+  display: flex;
+  color: #ffffff;
+  gap: 20px;
+}
+.Air-Product-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 228px;
+}
+
+.Air-Product-cards-image-container {
+  width: 60px;
+  height: 60px;
+  background-color: #132a56;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  align-items: center;
+}
+.Air-Product-cards-icon {
+  width: 20px;
+}
+.Air-Product-cards-sub-title {
+  font-size: 16px;
+  max-width: 196px;
+}
+.Air-Product-cards-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.Air-Login-Illustration-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 25px;
+  width: 100%;
+  overflow: visible;
+}
+.Air-Login-Illustration-img {
+  max-width: 700px !important;
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
+}
+.Air-Product-Info-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  padding: 12px 18px !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  max-width: 650px;
+}
+.Air-Product-Info-Container img {
+  max-width: 25px;
+  width: fit-content;
+}
+.Air-Product-Info-text {
+  font-size: 14px !important;
+  font-weight: 500;
+  color: #132a56;
+  text-align: left;
+  line-height: 20px;
+  margin: 0;
+}
+
+.Air-Login-Page-Right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+}
+.Air-Login-Page-Form-Header {
+  display: flex;
+  flex-direction: column;
+}
+.Air-Login-Page-Form-Text {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #132a56;
+}
+.Air-Login-Page-Message {
+  font-size: 16px;
+  margin: 0;
+  color: #132a5699;
+}
+.Air-Login-Page-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+  padding: 10px 30px;
+  box-sizing: border-box;
+}
+.Air-Login-Input-Wrapper {
+  display: flex;
+  align-items: center;
+  padding: 15px 16px;
+  border: 1px solid #c7c4d8;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 13px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.Air-Login-Input-Icon-Wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.Air-Login-Input-Container label {
+  font-size: 14px;
+  color: #111112;
+}
+.Air-Login-email-icon {
+  width: 20px;
+  height: 16px;
+}
+.Air-Login-pwd-icon {
+  width: 16px;
+  height: 21px;
+}
+.Air-Login-pwd-eye-icon {
+  width: 22px;
+  height: 16px;
+}
+
+.Air-Login-Input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 16px;
+  color: #132a56;
+}
+.Air-Login-Input::placeholder {
+  color: #b7b7b7;
+}
+.Air-Login-forgot-Link-Wrappper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Air-Login-forgot-Text {
+  font-size: 12px;
+  color: #176789;
+  cursor: pointer;
+}
+.Air-Login-Input-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.Air-Login-Checkbox-Container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.Air-Login-Checkbox-Container input {
+  width: 20px;
+  height: 20px;
+}
+.Air-Login-Checkbox-Text {
+  color: #333334;
+  font-size: 14px;
+}
+.Air-Login-Button {
+  display: flex;
+  width: 100%;
+  padding: 12px 0;
+  color: #ffffff;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+  background-color: #132a56;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+.Air-Login-Button-Icon {
+  width: 15px;
+}
+.Air-ResetLink-Container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.Air-resetLink-Seperator {
+  flex: 1;
+  height: 1px;
+  background-color: #c7c4d8;
+}
+.Air-ResetLink-text {
+  font-size: 14px;
+  color: #464555;
+  margin: 0;
+}
+.Air-Login-Google-Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #c7c4d8;
+  max-width: 188px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.Air-Login-Account-Creation-Link {
+  font-size: 14px;
+  color: #333334;
+  margin: 0;
+}
+.Air-Login-Account-Creation-Link a {
+  color: #176789;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.Air-Login-Google-icon {
+  max-width: 20px;
+}
+.Air-Login-Social-Logins-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.Air-Login-NavLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.Air-Login-NavLinks a {
+  text-decoration: none;
+  color: #272e40;
+  font-size: 12px;
+}
+.Air-Seperator-Dot-Black {
+  min-height: 4px;
+  min-width: 4px;
+  background-color: #c7c4d8;
+  border-radius: 50%;
+  margin-top: 3px;
+}
+.error-msg {
+  color: red;
+  font-size: 12px;
+  display: block;
+}
+
+@media screen and (max-width: 1599px) {
+  .AIR-Login-Page-Container {
+    gap: 80px;
+  }
+  .Air-Login-Page-Left {
+    width: 650px;
+    gap: 12px;
+  }
+  .Air-Login-Social-Logins-Container {
+    gap: 15px;
+  }
+  .Air-Login-Input-Container {
+    gap: 5px;
+  }
+
+  .Air-Product-Title {
+    font-size: 14px;
+  }
+  .Air-Product-HeroSec-Text {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .Air-Product-HeroSec-sub-heading {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .Air-Product-Info-text {
+    font-size: 11px;
+  }
+  .Air-Login-Page-Form-Text {
+    font-size: 28px;
+  }
+  .Air-Login-Page-Message {
+    font-size: 15px;
+  }
+  .Air-Login-Input-Container label {
+    font-size: 14px;
+  }
+  .Air-Login-Checkbox-Text {
+    font-size: 13px;
+  }
+  .Air-Login-Input {
+    font-size: 15px;
+  }
+  .Air-Login-Account-Creation-Link,
+  .Air-Login-NavLinks a {
+    font-size: 12px;
+  }
+  .Air-Login-forgot-Text {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .Air-Login-email-icon {
+    width: 16px;
+    height: 13px;
+  }
+  .Air-Login-pwd-icon {
+    width: 16px;
+    height: 18px;
+  }
+
+  .Air-Login-Input-Wrapper {
+    padding: 13px 14px;
+    gap: 11px;
+  }
+  .Air-Login-Button-Icon {
+    width: 12px;
+  }
+  .Air-Login-Google-icon {
+    max-width: 18px;
+  }
+  .Air-Login-Illustration-img {
+    max-width: 500px;
+  }
+  .Air-Login-pwd-eye-icon {
+    width: 18px;
+    height: 14px;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .AIR-Login-Page-Container {
+    gap: 40px;
+    padding: 20px;
+  }
+  .Air-Login-Page-Left {
+    max-width: 750px;
+  }
+
+  .Air-Product-Title {
+    font-size: 13px;
+  }
+  .Air-Product-HeroSec-Text {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .Air-Product-HeroSec-sub-heading {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .Air-Product-Info-text {
+    font-size: 10px;
+  }
+  .Air-Login-Page-Form-Text {
+    font-size: 24px;
+  }
+  .Air-Login-Page-Message {
+    font-size: 13px;
+  }
+  .Air-Login-Input-Container label {
+    font-size: 12px;
+  }
+  .Air-Login-Input {
+    font-size: 14px;
+  }
+  .Air-Login-forgot-Text,
+  .Air-Login-Account-Creation-Link,
+  .Air-Login-NavLinks a {
+    font-size: 11px;
+  }
+
+  .Air-Login-Input-Wrapper {
+    padding: 10px 12px;
+    gap: 10px;
+    border-radius: 6px;
+  }
+  .Air-Login-Button-Icon {
+    width: 12px;
+  }
+  .Air-Login-Google-icon {
+    max-width: 16px;
+  }
+  .Air-Login-Illustration-img {
+    max-width: 420px;
+  }
+  .Air-Login-Page-Right {
+    width: 420px;
+  }
+  .Air-Login-Page-form {
+    padding: 10px 15px;
+  }
+}
+
+/* 768px - 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .AIR-Login-Page-Container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    min-height: 100vh;
+    padding: 20px 16px;
+  }
+  .Air-Login-Page-Left-container {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .Air-Login-Page-Left {
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .Air-Login-Illustration-img {
+    max-height: 320px;
+  }
+  .Air-Product-Info-Container {
+    max-width: 100%;
+  }
+  .Air-Login-Page-Right {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+  }
+
+  .Air-Product-HeroSec-Text {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .Air-Login-Page-Form-Text {
+    font-size: 22px;
+  }
+  .Air-Login-Input-Wrapper {
+    padding: 11px 14px;
+  }
+}
+
+/* 767px and below (425 / 375 / 320) */
+@media screen and (max-width: 767px) {
+  .AIR-Login-Page-Container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    min-height: 100vh;
+    padding: 12px 10px;
+  }
+  .Air-Login-Page-Left-container {
+    display: none;
+  }
+  .Air-Login-Page-Right {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .Air-Login-Page-Form-Text {
+    font-size: 22px;
+  }
+  .Air-Login-Input-Wrapper {
+    padding: 11px 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .AIR-Login-Page-Container {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+  .Air-Product-HeroSec-Text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .Air-Product-HeroSec-sub-heading {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .Air-Login-Page-Form-Text {
+    font-size: 20px;
+  }
+  .Air-Login-Page-Message {
+    font-size: 12px;
+  }
+  .Air-Login-Input {
+    font-size: 13px;
+  }
+  .Air-Login-Page-form {
+    padding: 5px 5px;
+  }
+  .Air-Login-Input-Wrapper {
+    padding: 9px 12px;
+    gap: 8px;
+  }
+  .Air-Login-Google-Button {
+    max-width: 100%;
+  }
+}
+
+/* 1600px and above */
+@media screen and (min-width: 1600px) {
+  .Air-Login-Page-Left-container {
+    margin-left: 20px;
+  }
+  .Air-Login-Illustration-img {
+    max-height: 462px;
+  }
+}
+
+/* 1366px - 1599px */
+@media screen and (min-width: 1366px) and (max-width: 1599px) {
+  .Air-Login-Page-Left-container {
+    margin-left: 20px;
+  }
+  .Air-Login-Illustration-img {
+    max-height: 462px;
+  }
+}
+
+/* 1024px - 1365px */
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .Air-Login-Page-Left-container {
+    flex: 1 1 0;
+    min-width: 0;
+    margin-left: 10px;
+  }
+  .Air-Login-Page-Left {
+    width: 100%;
+    max-width: 100%;
+  }
+  .Air-Login-Illustration-img {
+    max-height: 440px;
+  }
+  .Air-Product-Info-Container {
+    max-width: 100%;
+  }
+  .Air-Login-Page-Right {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    margin-right: 10px;
+  }
+}
+
+/* 2560px and above */
+@media screen and (min-width: 2560px) {
+  .AIR-Login-Page-Container {
+    zoom: 1.4;
+    min-height: calc(100vh / 1.4);
+  }
+}
