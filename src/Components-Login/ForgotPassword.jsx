@@ -115,7 +115,7 @@ const ForgotPassword = () => {
           {/* BACK TO LOGIN SEPARATOR */}
           <div className="air-forgot-resetlink-container">
             <span className="air-forgot-resetlink-separator" />
-            <Link to="/login" className="air-forgot-resetlink-text">
+            <Link to="/LoginPage" className="air-forgot-resetlink-text">
               Back to Login
             </Link>
             <span className="air-forgot-resetlink-separator" />
@@ -135,7 +135,8 @@ const ForgotPassword = () => {
               Google
             </button>
             <p className="air-forgot-account-link">
-              Don't have an account? <Link to="/register">Create Account</Link>
+              Don't have an account?{" "}
+              <Link to="/candidate-registration">Create Account</Link>
             </p>
             <div className="air-forgot-navlinks">
               <Link to="/help">Help</Link>

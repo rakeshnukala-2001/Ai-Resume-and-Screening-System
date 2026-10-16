@@ -181,7 +181,10 @@ const LoginPage = () => {
               <p>Google</p>
             </div>
             <p className="Air-Login-Account-Creation-Link">
-              Don't have an account? <Link>Create Account</Link>
+              Don't have an account?{" "}
+              <Link onClick={() => navigate("/candidate-registration")}>
+                Create Account
+              </Link>
             </p>
             <div className="Air-Login-NavLinks">
               <Link>Help</Link>

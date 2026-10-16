@@ -311,7 +311,7 @@ export default function UserRegRecruiter() {
 
           <div className="Air-ur-recruiter-login-redirect">
             <span>Already have an account?</span>
-            <a href="#login">Login</a>
+            <a href="LoginPage">Login</a>
           </div>
         </div>
       </div>

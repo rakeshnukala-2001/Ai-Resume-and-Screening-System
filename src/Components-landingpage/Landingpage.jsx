@@ -26,7 +26,7 @@ function LandingPage() {
             Login
           </a>
 
-          <a href="/register" className="nav-register">
+          <a href="/candidate-registration" className="nav-register">
             Get Started
           </a>
         </div>

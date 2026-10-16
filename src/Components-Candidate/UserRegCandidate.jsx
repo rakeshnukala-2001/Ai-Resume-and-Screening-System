@@ -291,7 +291,7 @@ const Register = () => {
           </button>
 
           <p className="Air-ur-candidate-login">
-            Already have an account? <a href="/login">Login</a>
+            Already have an account? <a href="/LoginPage">Login</a>
           </p>
         </form>
       </section>

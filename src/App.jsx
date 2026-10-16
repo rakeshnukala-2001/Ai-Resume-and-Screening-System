@@ -6,7 +6,7 @@ import LoginPage from "./Components-Login/LoginPage";
 import ForgotPassword from "./Components-Login/ForgotPassword";
 import ResetPasswordLinkSent from "./Components-Login/ResetSuccessful";
 import AdminLogin from "./Components-Admin/AdminLogin";
-import LandingPage from "./Components-landingPage/LandingPage";
+import LandingPage from "./Components-landingpage/Landingpage";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
 
         {/* Login Page */}
-        <Route path="/Loginpage" element={<LoginPage />} />
+        <Route path="/LoginPage" element={<LoginPage />} />
 
         {/* Forgot Password Page */}
         <Route path="/forgot-password" element={<ForgotPassword />} />
