@@ -8,8 +8,6 @@ import dropdownIconImg from "../assets/dropdown-arrow.png";
 import eyeOpenImg from "../assets/open-eye.png";
 import eyeClosedImg from "../assets/close-eye.png";
 
-const ROLES = ["Recruiter", "Candidate", "Admin"];
-
 const FIELD_ROWS = [
   [
     {
@@ -93,6 +91,7 @@ const FIELD_ROWS = [
 
 export default function UserRegRecruiter() {
   const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     role: "Recruiter",
     fullName: "",
@@ -107,8 +106,8 @@ export default function UserRegRecruiter() {
     confirmPassword: "",
     agreeTerms: false,
   });
-  const [error, setError] = useState("");
 
+  const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -119,7 +118,9 @@ export default function UserRegRecruiter() {
       if (value === "Candidate") {
         navigate("/candidate-registration");
         return;
-      } else if (value === "Admin") {
+      }
+
+      if (value === "Admin") {
         navigate("/admin-registration");
         return;
       }
@@ -129,7 +130,10 @@ export default function UserRegRecruiter() {
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
-    if (error) setError("");
+
+    if (error) {
+      setError("");
+    }
   };
 
   const handleSubmit = (e) => {
@@ -140,8 +144,17 @@ export default function UserRegRecruiter() {
       return;
     }
 
+    if (!formData.agreeTerms) {
+      setError("Please accept the terms of service and privacy policy.");
+      return;
+    }
+
     setError("");
+
     console.log("Form Submitted:", formData);
+
+    // Redirect to Login page after validation
+    navigate("/Loginpage");
   };
 
   return (
@@ -152,11 +165,13 @@ export default function UserRegRecruiter() {
           <p className="Air-ur-recruiter-brand-tag">
             AI Education &amp; Workforce Development Platform
           </p>
+
           <h1 className="Air-ur-recruiter-brand-heading">
             Manage Placements.
             <br />
             Create Opportunities.
           </h1>
+
           <p className="Air-ur-recruiter-brand-subtext">
             Streamline training, placement activities and recruitment
             coordination - all in one platform.
@@ -173,6 +188,7 @@ export default function UserRegRecruiter() {
             alt=""
             className="Air-ur-recruiter-quote-lock-icon"
           />
+
           <div className="Air-ur-recruiter-quote-content-wrap">
             <p>Your trust, our priority</p>
             <span>Secure, reliable and built for your institution.</span>
@@ -189,9 +205,10 @@ export default function UserRegRecruiter() {
           </div>
 
           <form onSubmit={handleSubmit} className="Air-ur-recruiter-form">
-            {/* Role dropdown (full width) */}
+            {/* Role dropdown */}
             <div className="Air-ur-recruiter-field-group full-width Air-ur-recruiter-role-group">
               <label htmlFor="role">Select your role</label>
+
               <div className="Air-ur-recruiter-select-wrapper">
                 <select
                   id="role"
@@ -205,6 +222,7 @@ export default function UserRegRecruiter() {
                   <option value="Candidate">Candidate</option>
                   <option value="Admin">Admin</option>
                 </select>
+
                 <img
                   src={dropdownIconImg}
                   alt=""
@@ -213,19 +231,24 @@ export default function UserRegRecruiter() {
               </div>
             </div>
 
-            {/* Two column rows */}
+            {/* Form fields */}
             {FIELD_ROWS.map((row, index) => (
               <div className="Air-ur-recruiter-row" key={index}>
                 {row.map((field) => {
                   const isPassword = field.name === "password";
                   const isConfirmPassword = field.name === "confirmPassword";
+
                   const hasEyeIcon = isPassword || isConfirmPassword;
 
                   let inputType = field.type;
-                  if (isPassword)
+
+                  if (isPassword) {
                     inputType = showPassword ? "text" : "password";
-                  if (isConfirmPassword)
+                  }
+
+                  if (isConfirmPassword) {
                     inputType = showConfirmPassword ? "text" : "password";
+                  }
 
                   return (
                     <div
@@ -233,6 +256,7 @@ export default function UserRegRecruiter() {
                       key={field.name}
                     >
                       <label htmlFor={field.name}>{field.label}</label>
+
                       <div
                         className={
                           hasEyeIcon ? "Air-ur-recruiter-password-wrapper" : ""
@@ -250,24 +274,48 @@ export default function UserRegRecruiter() {
                             hasEyeIcon ? "Air-ur-recruiter-password-input" : ""
                           }
                         />
+
                         {isPassword && (
                           <img
                             src={showPassword ? eyeOpenImg : eyeClosedImg}
-                            alt="Toggle Password"
+                            alt={
+                              showPassword ? "Hide password" : "Show password"
+                            }
+                            role="button"
+                            tabIndex={0}
                             className="Air-ur-recruiter-eye-icon"
                             onClick={() => setShowPassword((prev) => !prev)}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" || e.key === " ") {
+                                e.preventDefault();
+                                setShowPassword((prev) => !prev);
+                              }
+                            }}
                           />
                         )}
+
                         {isConfirmPassword && (
                           <img
                             src={
                               showConfirmPassword ? eyeOpenImg : eyeClosedImg
                             }
-                            alt="Toggle Confirm Password"
+                            alt={
+                              showConfirmPassword
+                                ? "Hide confirm password"
+                                : "Show confirm password"
+                            }
+                            role="button"
+                            tabIndex={0}
                             className="Air-ur-recruiter-eye-icon"
                             onClick={() =>
                               setShowConfirmPassword((prev) => !prev)
                             }
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" || e.key === " ") {
+                                e.preventDefault();
+                                setShowConfirmPassword((prev) => !prev);
+                              }
+                            }}
                           />
                         )}
                       </div>
@@ -277,6 +325,7 @@ export default function UserRegRecruiter() {
               </div>
             ))}
 
+            {/* Terms and conditions */}
             <div className="Air-ur-recruiter-terms">
               <label>
                 <input
@@ -286,6 +335,7 @@ export default function UserRegRecruiter() {
                   onChange={handleChange}
                   required
                 />
+
                 <p>
                   I agree to the <span>Terms of service</span> and{" "}
                   <span>privacy policy</span> regarding my administrative
@@ -294,24 +344,39 @@ export default function UserRegRecruiter() {
               </label>
             </div>
 
+            {/* Validation error */}
             {error && (
               <p
                 className="Air-ur-recruiter-error"
                 role="alert"
-                style={{ color: "red", fontSize: "12px", margin: "0" }}
+                style={{
+                  color: "red",
+                  fontSize: "12px",
+                  margin: "0",
+                }}
               >
                 {error}
               </p>
             )}
 
+            {/* Complete Registration button */}
             <button type="submit" className="Air-ur-recruiter-submit-btn">
               Complete Registration
             </button>
           </form>
 
+          {/* Login navigation */}
           <div className="Air-ur-recruiter-login-redirect">
-            <span>Already have an account?</span>
-            <a href="LoginPage">Login</a>
+            <span>Already have an account?</span>{" "}
+            <a
+              href="/Loginpage"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/Loginpage");
+              }}
+            >
+              Login
+            </a>
           </div>
         </div>
       </div>
